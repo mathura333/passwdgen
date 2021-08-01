@@ -5,7 +5,9 @@
   "main": "dist/index.js",
   "module": "dist/index.es.js",
   "preferGlobal": true,
-  "bin": "dist/index.js",
+  "bin": {
+    "passwdgen": "dist/index.js"
+  },
   "repository": "git@github.com:mathura333/passwdgen.git",
   "author": "mathura333 <mathuradas333@gmail.com>",
   "license": "MIT",
@@ -20,12 +22,12 @@
     "chalk": "^4.1.2",
     "clipboardy": "^2.3.0",
     "commander": "^8.1.0",
-    "randexp": "^0.5.3",
-    "ts-node": "^10.1.0"
+    "randexp": "^0.5.3"
   },
   "devDependencies": {
     "@types/node": "^16.4.9",
     "prettier": "^2.3.2",
+    "ts-node": "^10.1.0",
     "typescript": "^4.3.5"
   }
 }
