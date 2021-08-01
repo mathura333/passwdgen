@@ -7,12 +7,14 @@
   "author": "mathura333 <mathuradas333@gmail.com>",
   "license": "MIT",
   "scripts": {
+    "dev": "ts-node index.ts",
     "build": "tsc"
   },
   "dependencies": {
     "chalk": "^4.1.2",
     "clipboardy": "^2.3.0",
     "commander": "^8.1.0",
+    "randexp": "^0.5.3",
     "ts-node": "^10.1.0"
   },
   "devDependencies": {
