@@ -8,9 +8,17 @@
   "bin": {
     "passwdgen": "dist/index.js"
   },
+  "files": [
+    "dist"
+  ],
   "repository": "git@github.com:mathura333/passwdgen.git",
   "author": "mathura333 <mathuradas333@gmail.com>",
   "license": "MIT",
+  "keywords": [
+    "cli",
+    "password-generation",
+    "nodejs"
+  ],
   "scripts": {
     "dev": "ts-node index.ts",
     "start": "node dist/index.js",
