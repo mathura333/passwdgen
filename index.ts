@@ -1,4 +1,6 @@
 import { program } from 'commander';
+import chalk from 'chalk';
+import clipboardy from 'clipboardy';
 import createPassword from './utils/createPassword';
 
 program.version('1.0.0').description('Password Generator');
@@ -15,7 +17,10 @@ program
 const { length, save, num, symbol, capital } = program.opts();
 
 //* Get generated password
-
 const generatedPassword = createPassword(length, capital, num, symbol);
 
-console.log(generatedPassword);
+// * Copy password to clipboard
+clipboardy.writeSync(generatedPassword);
+
+console.log(chalk.blue('Generated Password: ') + chalk.bold(generatedPassword));
+console.log(chalk.yellowBright('Password copied to clipboard'));
