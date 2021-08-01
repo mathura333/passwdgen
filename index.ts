@@ -2,6 +2,7 @@ import { program } from 'commander';
 import chalk from 'chalk';
 import clipboardy from 'clipboardy';
 import createPassword from './utils/createPassword';
+import savePassword from './utils/savePassword';
 
 program.version('1.0.0').description('Password Generator');
 
@@ -18,6 +19,11 @@ const { length, save, num, symbol, capital } = program.opts();
 
 //* Get generated password
 const generatedPassword = createPassword(length, capital, num, symbol);
+
+// * Save to file
+if (save) {
+  savePassword(generatedPassword);
+}
 
 // * Copy password to clipboard
 clipboardy.writeSync(generatedPassword);
